@@ -6,13 +6,22 @@ Think of it as your **AI-powered research analyst**: it plans, navigates, verifi
 
 ---
 
-## ✨ What Makes Evidentia Unique?
+## ✨ Features
 - 🤖 **Agentic AI orchestration** — planner, navigator, extractor, and writer agents working in sync.  
-- 🧾 **Citation-first by design** — every claim tied to exact spans in the source.  
 - 🌐 **Multimodal ingestion** — PDFs, web pages, YouTube talks (ASR), tables, figures, OCR images.  
+- 🧾 **Citation-first by design** — every claim tied to exact spans in the source.  
 - ⚡ **Production-ready stack** — FastAPI, LangGraph, Qdrant, Postgres, MinIO, Whisper, Prometheus, Langfuse.  
-- 📦 **Exports you can trust** — polished PDF, interactive HTML, and bundles with raw evidence.  
+- 📦 **Trustworthy exports** — polished PDF, interactive HTML, and bundles with raw evidence.  
 
 ---
 
 ## 🗺️ Architecture
+
+- 🖥️ **Frontend** → Next.js + Tailwind + shadcn/ui  
+- ⚙️ **Backend** → FastAPI + LangGraph agents  
+- 📂 **Storage** → Qdrant (vector DB), Postgres (runs), MinIO (artifacts)  
+- 📊 **Observability** → Prometheus + Grafana + Langfuse  
+
+---
+
+
