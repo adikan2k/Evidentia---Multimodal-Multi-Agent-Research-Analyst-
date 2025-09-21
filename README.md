@@ -24,12 +24,10 @@ Think of it as your **AI-powered research analyst**: it plans, navigates, verifi
 
 ---
 
-👩‍💻 Contributors
+## 👩‍💻 Contributors
+- **Aditya Kanbargi** — Data Science MS @ The George Washington University  
+- **Sanjana Kadambe Muralidhar** — Data Science MS @ The George Washington University  
 
-Aditya Kanbargi — Data Science MS @ The George Washington University
-
-Sanjana Kadambe Muralidhar — Data Science MS @ The George Washington University
-
-📜 License
+## 📜 License
 MIT License © 2025 Aditya Kanbargi & Sanjana Kadambe Muralidhar
 
