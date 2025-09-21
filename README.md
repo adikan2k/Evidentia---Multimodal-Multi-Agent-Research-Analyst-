@@ -1,6 +1,3 @@
-![CI](https://github.com/adikan2k/evidentia/actions/workflows/ci.yml/badge.svg)
-
-
 # Evidentia 📚🔍
 **Multimodal Multi-Agent Research Analyst — Evidence-First AI**
 
