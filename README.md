@@ -6,7 +6,7 @@ Think of it as your **AI-powered research analyst**: it plans, navigates, verifi
 
 ---
 
-## ✨ Features
+## Features
 - 🤖 **Agentic AI orchestration** — planner, navigator, extractor, and writer agents working in sync.  
 - 🌐 **Multimodal ingestion** — PDFs, web pages, YouTube talks (ASR), tables, figures, OCR images.  
 - 🧾 **Citation-first by design** — every claim tied to exact spans in the source.  
@@ -15,7 +15,7 @@ Think of it as your **AI-powered research analyst**: it plans, navigates, verifi
 
 ---
 
-## 🗺️ Architecture
+## Architecture
 
 - 🖥️ **Frontend** → Next.js + Tailwind + shadcn/ui  
 - ⚙️ **Backend** → FastAPI + LangGraph agents  
@@ -24,10 +24,10 @@ Think of it as your **AI-powered research analyst**: it plans, navigates, verifi
 
 ---
 
-## 👩‍💻 Contributors
+## Contributors
 - **Aditya Kanbargi** — Data Science MS @ The George Washington University  
 - **Sanjana Kadambe Muralidhar** — Data Science MS @ The George Washington University  
 
-## 📜 License
+## License
 MIT License © 2025 Aditya Kanbargi & Sanjana Kadambe Muralidhar
 
