@@ -7,8 +7,15 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    container: { center: true, padding: "1rem", screens: { "2xl": "1280px" } },
+    container: {
+      center: true,
+      padding: "1rem",
+      screens: { "2xl": "1280px" },
+    },
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+  ],
 };
