@@ -2,11 +2,16 @@ from typing import Dict
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from health import health_router
+import os
 
 app = FastAPI(title="Evidentia – Multimodal Multi-Agent Research Analyst")
+
+VERCEL_ORIGIN = os.getenv("VERCEL_ORIGIN")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000"] + ([VERCEL_ORIGIN] if VERCEL_ORIGIN else []),
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
