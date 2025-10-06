@@ -1,14 +1,24 @@
 FROM python:3.11-slim
+
+# System deps (psql client optional, useful for debug)
+RUN apt-get update && apt-get install -y build-essential curl && rm -rf /var/lib/apt/lists/*
+
+# Workdir
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates curl && rm -rf /var/lib/apt/lists/*
-
-COPY requirements.txt /app/requirements.txt
+# Copy requirements first (better cache)
+COPY app/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
-COPY app/ /app
+# Copy the app
+COPY app /app
 
-ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+# Env (FastAPI/uvicorn)
+ENV PYTHONUNBUFFERED=1
+ENV PORT=8080
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+# Expose (platforms like Render inject PORT; we respect it below)
+EXPOSE 8080
+
+# Start server (use $PORT if provided; default 8080)
+CMD ["sh", "-lc", "python -m uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}"]
